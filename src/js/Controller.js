@@ -17,7 +17,6 @@ export default class Controller {
             View.renderCatBar(Model.state.menuCategories);
             View.render(Model.state);
         } catch(err) {
-            console.error(err);
             View.renderError();
         }
     }
