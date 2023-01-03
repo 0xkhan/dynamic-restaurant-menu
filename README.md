@@ -5,7 +5,7 @@ the name basically describes the purpose of this little component. It allows
 you to add a dynamic menu to your static websites.
 
 ### Demo
-See the [Demo Here]() with default theme!
+See the [Demo Here](https://drm-demo.pages.dev/) with default theme!
 
 ### How to use it?
 Of course there are better ways to use this component e.g npm package etc.
