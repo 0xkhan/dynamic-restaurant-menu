@@ -1,0 +1,156 @@
+@use '../abstracts' as *;
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        font-size: $font-size-default;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        position: relative;
+        border-radius: .3rem;
+        transition: all .2s;
+
+        // Changes for button elements
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 .1rem 2rem rgba($color-black, .2);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    &--round {
+        border-radius: 5rem;    
+    }
+}
+
+.menu {
+    &__tabs {
+        text-align: center;
+    }
+    
+    &__tab {
+        margin-top: 1.5rem;
+       
+        @include respond(tab-port) {
+            padding: 1rem 2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+            margin-top: .8rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+            
+            @include respond(tab-port) {
+                margin-right: .3rem;
+            }
+
+            @include respond(phone) {
+                margin-right: .3rem;
+            }
+        }
+
+        &--active {
+            background-color: #f0bf72;
+            transform: translateY(-0.3rem);
+        }
+    }
+    
+    &__content {
+        width: 100%;
+        padding: 1.5rem;
+        display: none;
+
+        &-col {
+            grid-column: span 6;
+
+            @include respond(tab-port) {
+                grid-column: span 12;
+            }
+        }
+
+        &--active {
+            display: inline-block;
+        }
+
+        &--extra {
+            color: $color-success;
+        }
+    }
+    
+    &__item {
+        height: 100%;
+
+        &-desc {
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed #999;
+            height: 100%;
+
+            &--extra {
+                font-size: 1.4rem;
+                color: $color-danger;
+            }
+        }
+
+        &-price {
+            font-size: 2rem;
+            font-weight: 300;
+            display: inline-block;
+            float: right;
+            padding: 0 1.5rem;
+            background-color: #f1f1ff;
+            border-radius: .5rem;
+        }
+
+        &-ingredients {
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+    }
+}
+
+.menu__content-container {
+    margin-top: 5rem;
+}
+
+.menu__content-extra {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.spinner {
+    margin: 5rem auto;
+    text-align: center;
+
+    svg {
+        width: 5rem;
+        height: 5rem;
+        stroke-width: 2;
+        animation: rotate 2s infinite linear;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

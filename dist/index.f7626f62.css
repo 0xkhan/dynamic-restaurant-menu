@@ -1,0 +1,274 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap";
+*, :after, :before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+.row {
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(12, 1fr);
+  display: grid;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container-xxl, .container {
+    max-width: 1320px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container-xl, .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container-lg, .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-md, .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+
+body {
+  font-family: Lato, sans-serif;
+  line-height: 1.7;
+}
+
+.lead {
+  font-size: 1.8rem;
+}
+
+.nav__container {
+  border-radius: 1rem;
+  margin: 2.5rem 0 5rem;
+  padding: 2rem;
+  display: flex;
+  box-shadow: .5rem .5rem 4rem #0003;
+}
+
+.nav__logo {
+  flex-basis: 50%;
+  align-items: center;
+  display: flex;
+}
+
+.nav__nav {
+  flex-basis: 50%;
+  justify-content: end;
+  display: flex;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__item {
+  height: 100%;
+  display: inline-block;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.nav__link {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.nav__link:link, .nav__link:visited, .nav__logo-link:link, .nav__logo-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav__icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2px;
+  stroke: currentColor;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: .3rem;
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: all .2s;
+  display: inline-block;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 .1rem 2rem #0003;
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-.1rem);
+  box-shadow: 0 .5rem 1rem #0003;
+}
+
+.btn--round {
+  border-radius: 5rem;
+}
+
+.menu__tabs {
+  text-align: center;
+}
+
+.menu__tab {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .menu__tab {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .menu__tab {
+    margin-top: .8rem;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+.menu__tab:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .menu__tab:not(:last-child) {
+    margin-right: .3rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .menu__tab:not(:last-child) {
+    margin-right: .3rem;
+  }
+}
+
+.menu__tab--active {
+  background-color: #f0bf72;
+  transform: translateY(-.3rem);
+}
+
+.menu__content {
+  width: 100%;
+  padding: 1.5rem;
+  display: none;
+}
+
+.menu__content-col {
+  grid-column: span 6;
+}
+
+@media only screen and (max-width: 720px) {
+  .menu__content-col {
+    grid-column: span 12;
+  }
+}
+
+.menu__content--active {
+  display: inline-block;
+}
+
+.menu__content--extra {
+  color: #2dce89;
+}
+
+.menu__item {
+  height: 100%;
+}
+
+.menu__item-desc {
+  height: 100%;
+  border-bottom: 1px dashed #999;
+  padding-bottom: 2rem;
+}
+
+.menu__item-desc--extra {
+  color: #f5365c;
+  font-size: 1.4rem;
+}
+
+.menu__item-price {
+  float: right;
+  background-color: #f1f1ff;
+  border-radius: .5rem;
+  padding: 0 1.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.menu__item-ingredients {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.menu__content-container {
+  margin-top: 5rem;
+}
+
+.menu__content-extra {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.spinner {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.spinner svg {
+  width: 5rem;
+  height: 5rem;
+  stroke-width: 2px;
+  animation: 2s linear infinite rotate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=index.f7626f62.css.map */
