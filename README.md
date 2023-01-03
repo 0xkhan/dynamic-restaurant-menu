@@ -78,5 +78,6 @@ You also wanna add some HTML in your HTML file where you wanna show the menu.
 But wait! You're not done yet. If you want to use the whole thing without
 customization then you also need the styles for it. Navigate to `src/sass/themes/`
 there you'll find SCSS files for different themes just copy the one you need!
+
 (Optional!) You might want to copy it to your `components/` directory and rename it
 to `_menu.scss`.
