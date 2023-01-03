@@ -58,5 +58,6 @@ node_modules
 wpcs/
 composer.lock
 package-lock.json
+dist/
 dist/mix-manifest.json
 .parcel-cache
